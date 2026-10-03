@@ -54,3 +54,25 @@ body:not(.office-mode) .item-exhibit{background:#1e3042;color:#79d9d0}.rune-inpu
 .plate-grid{background:#263e50}.glyph-cell{background:#f8f8ee;color:#223949}.glyph-cell.covered{background:#647e87;color:#dae4e6}.device-readout,.final-status span,.film-controls>div{background:#e2e9eb}.mask-grid .filled{background:#243c50}.empty-mirror{background:#bfd5d8;border-color:#365b69}.ending-stamp{font-family:'Noto Sans KR',sans-serif;color:#d82c43;border-color:#d82c43}.object-modal .feedback,.object-modal [role=status]{color:#a0293c}
 .office-mode .layout{padding:0!important}.office-mode .layout>section{padding-top:0}.office-mode .room-head{padding:14px 20px 35px!important;background:#f3f3f3}.office-mode .room-head:after{bottom:10px}.office-mode #room-state{max-width:40%}.office-mode .world-status{background:#fff;color:#444;border-color:#ccc}.office-mode .stage{height:auto!important;aspect-ratio:auto!important;min-height:0!important;padding:35px 20px 18px}.office-mode .stage.schematic{min-height:0!important;background:#fff}.office-mode .archive-scene,.office-mode .mail-scene{display:none}.office-mode .schematic .hotspot{display:flex!important}.office-mode .hotspot:before{display:none!important}.office-mode .hotspot .tag{background:none!important;color:#333!important;border:0!important;padding:0!important;max-width:none;text-align:left}.office-mode #scene-targets{display:none}.office-mode .room-note{padding:12px 20px!important;color:#555}.office-mode .navigation{background:#f4f4f4;border-bottom:1px solid #bbb}.office-mode .nav.active{background:white!important;color:#217346!important;border-bottom:3px solid #217346!important}.office-mode #item-note{color:#555}.office-mode .mask-grid .filled{background:#555}.office-mode .glyph-cell{background:white;color:#333}.office-mode .glyph-cell.covered{background:#ddd;color:#777}
 @media(max-width:700px){.layout{padding:16px 12px 0!important}.room-head{align-items:flex-start;flex-direction:column;gap:8px}#room-state{max-width:100%}.room-head h1{font-size:21px!important}body:not(.office-mode) .brand{font-size:15px}.stage{aspect-ratio:1672/940!important}.hotspot:before{width:24px!important;height:24px!important;line-height:21px!important;font-size:9px!important}.hotspot .tag{display:none!important}.office-mode .hotspot .tag{display:block!important}#scene-targets{gap:6px}#scene-targets button{padding:8px;font-size:11px;flex:1 1 140px}.navigation{flex-wrap:wrap}.nav{flex:1 1 30%;padding:12px 6px}.archive-scene{padding:22px 18px}.archive-shelves{width:100%;gap:6px}.archive-heading strong{font-size:27px}.mail-scene{padding:25px 18px}.mail-network span{padding:18px 5px}.modal{padding:25px 18px!important}.inventory{gap:7px}.item{min-width:100px!important}.office-mode #room-state{max-width:100%}.world-status{font-size:10px;padding:6px 9px}.object-layout:has(.pinned-clue){grid-template-columns:1fr}.pinned-clue{position:static}.top-actions{justify-content:flex-start}}
+/* 08 fixes: 진행 안내 막대, 서가 개편, 터치 기기 */
+.case-bar{display:grid;grid-template-columns:1fr auto;gap:8px 16px;align-items:center;background:#1b2431;border:1px solid #45505e;border-left:3px solid #df3046;padding:12px 16px;margin:0 0 14px}
+.case-steps{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px}
+.case-steps span{font-size:11px;padding:3px 9px;border:1px solid #536171;color:#9aa8b5}
+.case-steps span.done{border-color:#79d9d0;color:#79d9d0}
+.case-objective{margin:0;font-size:14px;line-height:1.6;color:#f5f3ed}
+.case-objective b{display:inline-block;margin-right:10px;color:#79d9d0;font-size:12px}
+.case-hint{background:transparent;border:1px solid #df3046;color:#f5f3ed;padding:8px 14px;font:inherit;font-size:13px;cursor:pointer;white-space:nowrap}
+.case-hint:hover,.case-hint:focus-visible{background:#df3046}
+.book-puzzle{grid-template-columns:repeat(5,1fr)!important}
+.puzzle-book.flipped span{transform:rotate(180deg)}
+.shelf-cart{display:flex;align-items:center;gap:12px;margin:-10px 0 18px;padding:10px;border:1px dashed #6c7d8c}
+.shelf-cart small{font-size:12px;opacity:.8;white-space:nowrap}
+.shelf-cart .puzzle-book{min-height:0;flex-direction:row;gap:14px;padding:8px 16px}
+.shelf-cart .puzzle-book span{writing-mode:horizontal-tb;margin:0}
+.shelf-cart .puzzle-book.flipped span{transform:rotate(180deg)}
+.office-mode .case-bar{background:#fff;border-color:#ccc;border-left-color:#217346}
+.office-mode .case-objective{color:#333}.office-mode .case-objective b,.office-mode .case-steps span.done{color:#217346;border-color:#217346}
+.office-mode .case-hint{color:#333;border-color:#999}.office-mode .case-hint:hover{background:#eee}
+@media (hover:none){.exploration-mode:not(.office-mode) #scene-targets{display:flex}}
+@media(max-width:700px){.case-bar{grid-template-columns:1fr;padding:10px 12px}.case-hint{justify-self:start}.puzzle-book{min-height:130px}.puzzle-book b{font-size:22px}}
+.plate-grid.reflected{clip-path:polygon(0 8%,8% 0,100% 0,100% 100%,0 100%)}.plate-grid.reflected .plate-notch{right:auto;left:26px}
